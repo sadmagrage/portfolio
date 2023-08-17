@@ -10,19 +10,27 @@
 <body>
     <header>
         <div class="social-media-icons">
+            <a href="https://api.whatsapp.com/send?phone=5511942756379"><img class="icon" src="./images/whatsapp.png" alt=""></a>
             <a href="https://github.com/sadmagrage"><img class="icon" src="./images/github.png" alt=""></a>
             <a href="https://www.linkedin.com/in/victor-goya-9802ba24b/"><img class="icon" src="./images/linkedin.png" alt=""></a>
+            <a href="mailto:victorgoyapvgp12@gmail.com"><img class="icon white-background" src="./images/email.png" alt=""></a>
         </div>
     </header>
     <main id="inicio">
         <div class="content">
             <div class="intro-section">
-                <h1>Olá</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio veniam provident quis totam, rerum incidunt necessitatibus quidem magnam accusantium eum alias sint assumenda. Quasi rem aut non dolorum. Reprehenderit, quod?</p>
+                <div class="presentation">
+                    <h1>Oi</h1>
+                    <h4 id="identity"></h4>
+                    <p id="explanation">Sou desenvolvedor, tenho experiência no front-end e no back-end, demonstrada nos projetos pessoais.</p>
+                    <h4>Clique em Projetos, para ver mais projetos e seus detalhes.</h4>
+                </div>
             </div>
             <div class="projects-section">
                 <h3>Projetos</h3>
-                <img class="icon" src="./images/loading.png" alt="">
+                <div class="loading-container loading-project-section">
+                    <img class="loading-icon" src="./images/loading-gif.gif" alt="">
+                </div>
             </div>
         </div>
         <div id="show_projects">
@@ -30,9 +38,12 @@
                 <img id="left-arrow" class="icon" src="images/left-arrow.png" alt="">
             </div>
             <div class="projects-list">
-                
+                <div class="loading-container">
+                    <img class="loading-icon" src="./images/loading-gif.gif" alt="">
+                </div>
             </div>
         </div>
+        <p id="resposta"></p>
     </main>
     <script src="./js/script.js"></script>
 </body>
