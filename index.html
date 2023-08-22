@@ -18,18 +18,24 @@
     </header>
     <main id="inicio">
         <div class="content">
-            <div class="intro-section">
-                <div class="presentation">
-                    <h1>Oi</h1>
-                    <h4 id="identity"></h4>
-                    <p id="explanation">Sou desenvolvedor, tenho experiência no front-end e no back-end, demonstrada nos projetos pessoais.</p>
-                    <h4>Clique em Projetos, para ver mais projetos e seus detalhes.</h4>
+            <div class="intro-project-section">
+                <div class="intro-section">
+                    <div class="presentation">
+                        <h1>Oi</h1>
+                        <h4 id="identity"></h4>
+                        <p id="explanation">Sou desenvolvedor, tenho experiência no front-end e no back-end, demonstrada nos projetos pessoais.</p>
+                        <h4>Clique em Projetos para ver mais projetos e seus detalhes.</h4>
+                    </div>
+                    <div id="tecnologies-container">
+                        <h3>Tecnologias conhecidas</h3>
+                        <div id="tecnologies"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="projects-section">
-                <h3>Projetos</h3>
-                <div class="loading-container loading-project-section">
-                    <img class="loading-icon" src="./images/loading-gif.gif" alt="">
+                <div class="projects-section">
+                    <h3 id="projetos-title">Projetos</h3>
+                    <div class="loading-container loading-project-section">
+                        <img class="loading-icon" src="./images/loading-gif.gif" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -43,9 +49,7 @@
                 </div>
             </div>
         </div>
-        <p id="resposta"></p>
     </main>
-    <script src="./js/script.js"></script>
+    <script type="module" src="./js/script.js"></script>
 </body>
-
 </html>

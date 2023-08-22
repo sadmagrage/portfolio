@@ -26,7 +26,7 @@ header {
     padding: 50px;
 }
 
-h3 {
+#projetos-title {
     text-align: center;
 }
 
@@ -53,6 +53,8 @@ h1, h2, h3, h4, h5, a, p {
 
 .project-thumbnail {
     margin: 15px;
+    display: flex;
+    justify-content: center;
 }
 
 #inicio {
@@ -66,6 +68,7 @@ h1, h2, h3, h4, h5, a, p {
     width: 70vw;
     align-self: center;
     display: flex;
+    flex-direction: column;
 }
 
 #show_projects {
@@ -97,7 +100,7 @@ h1, h2, h3, h4, h5, a, p {
 
 .projects-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     margin-left: 60px;
     margin-right: 60px;
@@ -112,13 +115,22 @@ h1, h2, h3, h4, h5, a, p {
 }
 
 .project-item {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
     width: 20vw;
     margin: 15px 0;
 }
 
+.project-item:hover {
+    cursor: pointer;
+}
+
 .project-image {
-    width: 100%;
-    height: auto;
+    align-self: center;
+    max-width: 200px;
 }
 
 #reticencias {
@@ -146,6 +158,127 @@ h1, h2, h3, h4, h5, a, p {
     border-radius: 50%;
 }
 
+#tecnologies-container {
+    margin-top: 20px;
+}
+
+#tecnologies {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tecnology {
+    width: 70px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tecnology-image {
+    height: 50px;
+}
+
+.tecnology-title {
+    text-align: center;
+}
+
+.intro-project-section {
+    display: flex;
+}
+
+.status {
+    align-self: center;
+}
+
+.isUp, .isntUp {
+    margin: auto 10px;
+    align-self: center;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.isUp {
+    background-color: red;
+}
+
+.status {
+    display: flex;
+    justify-content: space-around;
+}
+
+.project-name {
+    text-align: center;
+}
+
+.tecnology-info {
+    display: flex;
+}
+
+.tecnology-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.inactive {
+    display: none;
+}
+
+.description-text {
+    margin: 0px 10px 10px 10px;
+}
+
+.description-links {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.repository-link, .project-link  {
+    text-decoration: none;
+    padding: 2px 0px;
+    width: 100%;
+}
+
+.repository-link {
+    margin-right: 1px;
+}
+
+.project-link {
+    margin-left: 1px;
+}
+
+.repository-link {
+    border-radius: 15px 0px 0px 15px;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+}
+
+.project-link {
+    border-radius: 0px 15px 15px 0px;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.repository-image {
+    height: 50px;
+}
+
+.only-link {
+    border-radius: 15px;
+}
+
+.project-link-text {
+    color: black;
+}
+
 @media (max-width: 768px) {
     .content {
         width: 85vw;
@@ -156,9 +289,14 @@ h1, h2, h3, h4, h5, a, p {
         padding: 20px;
     }
 
-    .intro-section ,
+    .intro-section,
     .projects-section {
         width: 90vw;
+    }
+
+    #tecnologies {
+        overflow-x: auto;
+        flex-wrap: nowrap;
     }
 
     #inicio {
@@ -171,8 +309,12 @@ h1, h2, h3, h4, h5, a, p {
         justify-content: space-around;
     }
 
-    .project-item {
-        width: 40vw;
+    .project-image, .project-section {
+        height: 150px;
+    }
+
+    .project-image {
+        margin: 10px auto;
     }
 }
 
@@ -185,7 +327,7 @@ h1, h2, h3, h4, h5, a, p {
         padding: 10px;
     }
 
-    .intro-section ,
+    .intro-section,
     .projects-section {
         width: 100vw;
     }
@@ -198,5 +340,13 @@ h1, h2, h3, h4, h5, a, p {
 
     .project-item {
         width: 80vw;
+    }
+
+    .tecnology {
+        width: 80px;
+    }
+
+    .tecnology-image {
+        height: 70px;
     }
 }
