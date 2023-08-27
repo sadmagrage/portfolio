@@ -84,7 +84,7 @@ const projectLinks = (item) => {
         linksElement += `<a class="repository-link" href="${ item.repository }" target="_blank" ><img class="repository-image" src="./images/github.png" /></a><a class="project-link" href="${ item.runningLink }" target="_blank" ><h5 class="project-link-text">Link do projeto</h5></a>`
     }
     else {
-        linksElement = `<a class="repository-link only-link" href="${ item.repository }" target="_blank" ><img class="repository-image" src="../images/github.png" /></a>`;
+        linksElement = `<a class="repository-link only-link" href="${ item.repository }" target="_blank" ><img class="repository-image" src="./images/github.png" /></a>`;
     }
 
     return linksElement;
@@ -121,19 +121,24 @@ const projectItemElements = document.querySelectorAll(".project-item");
 projectItemElements.forEach(projectItemElement => {
     projectItemElement.addEventListener("click", (e) => {
 
-        const listWrapperOpen = document.querySelectorAll(".open");
-
-        if (listWrapperOpen.length >= 1) {
-            listWrapperOpen[0].classList.toggle("open");
-            return;
-        }
-
         if (e.target.classList.contains("description-links") || e.target.closest(".description-links")) {
             e.stopPropagation();
             return;
         }
-    
+
         const element = e.currentTarget.querySelector(".wrapper");
+        const isOpen = element.classList.contains("open");
+
+        if (isOpen) {
+            element.classList.toggle("open");
+            return;
+        }
+
+        const listWrapperOpen = document.querySelectorAll(".open");
+
+        if (listWrapperOpen.length > 0) {
+            listWrapperOpen[0].classList.toggle("open");
+        }
 
         element.classList.toggle("open");
     });
