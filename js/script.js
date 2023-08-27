@@ -1,8 +1,15 @@
 import { technologiesData } from "./technologies.js";
 import { projectsData } from "./projects.js";
 
+const loaded = () => {
+    document.querySelector(".loading-screen").classList.toggle("disable");
+    document.querySelector(".full-page").classList.toggle("disable")
+};
+
 const technologies = await technologiesData();
 const projects = await projectsData();
+
+loaded();
 
 const projectsSection = document.querySelector('.projects-section');
 const leftArrow = document.querySelector("#left-arrow");
