@@ -120,7 +120,6 @@ h1, h2, h3, h4, h5, a, p {
     margin-left: 60px;
     margin-right: 60px;
     overflow-y: auto;
-    max-height: 75vh;
     height: 100%;
 }
 
@@ -131,12 +130,13 @@ h1, h2, h3, h4, h5, a, p {
 
 .project-item {
     height: min-content;
-    background-color: rgba(255, 255, 255, 0.4);
+    background: linear-gradient(80deg, #202, #000);
     border-radius: 15px;
     padding: 10px;
     display: flex;
     flex-direction: column;
-    width: min-content;
+    min-width: min-content;
+    max-width: 30%;
     margin: 15px 0;
 }
 
@@ -144,10 +144,20 @@ h1, h2, h3, h4, h5, a, p {
     cursor: pointer;
 }
 
-.project-image {
-    margin: 15px auto;
+.project-thumbnail {
+    margin: auto 0;
+}
+
+.project-thumbnail .project-image {
+    margin: 15px 0;
     align-self: center;
-    max-width: 90%;
+    width: 100%;
+}
+
+.project-item .project-image {
+    /* max-height: 50vh; */
+    margin: 15px 0;
+    max-width: 100%;
 }
 
 #reticencias {
@@ -234,11 +244,13 @@ h1, h2, h3, h4, h5, a, p {
 
 .technology-info {
     display: flex;
+    align-items: center;
 }
 
 .technology-icon {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
+    margin: 2.5px 5px 2.5px 0;
     margin-right: 5px;
 }
 
@@ -316,6 +328,12 @@ h1, h2, h3, h4, h5, a, p {
     grid-template-rows: 1fr;
 }
 
+@media (max-width: 1000px) {
+    .project-item {
+        max-width: 40%;
+    }
+}
+
 @media (max-width: 768px) {
     .content {
         width: 85vw;
@@ -326,9 +344,16 @@ h1, h2, h3, h4, h5, a, p {
         padding: 20px;
     }
 
-    .intro-section,
-    .projects-section {
-        width: 90vw;
+    .intro-section, .projects-section {
+        width: 50vw;
+    }
+
+    .project-thumbnail {
+        margin: auto 0px;
+    }
+
+    .project-thumbnail, .project-image {
+        width: 100%;
     }
 
     #technologies {
@@ -340,26 +365,28 @@ h1, h2, h3, h4, h5, a, p {
         width: 90vw;
     }
 
-    .project-item {
-        width: 90%;
-    }
-
     .projects-section {
         margin-right: 0;
     }
 
     .projects-list {
+        height: min-content;
         flex-wrap: wrap;
         margin-left: 20px;
         margin-right: 20px;
     }
 
-    .project-image, .project-section {
-        height: 150px;
+    .project-item .project-image {
+        min-width: 80vw;
     }
 
     .project-image {
         margin: 10px auto;
+    }
+
+    .project-item {
+        height: min-content;
+        width: 90%;
     }
 
 }
