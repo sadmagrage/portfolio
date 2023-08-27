@@ -81,7 +81,7 @@ const projectLinks = (item) => {
     let linksElement = "";
 
     if (item.runningLink.length > 0) {
-        linksElement += `<a class="repository-link" href="${ item.repository }" target="_blank" ><img class="repository-image" src="../images/github.png" /></a><a class="project-link" href="${ item.runningLink }" target="_blank" ><h5 class="project-link-text">Link do projeto</h5></a>`
+        linksElement += `<a class="repository-link" href="${ item.repository }" target="_blank" ><img class="repository-image" src="./images/github.png" /></a><a class="project-link" href="${ item.runningLink }" target="_blank" ><h5 class="project-link-text">Link do projeto</h5></a>`
     }
     else {
         linksElement = `<a class="repository-link only-link" href="${ item.repository }" target="_blank" ><img class="repository-image" src="../images/github.png" /></a>`;
